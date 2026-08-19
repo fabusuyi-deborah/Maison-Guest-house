@@ -14,7 +14,7 @@ const SideBar = ({ isOpen, onClose }: SideBarProps) => {
       {/* Backdrop */}
       {isOpen && (
         <div
-          className="fixed inset-0 z-40 bg-black/10 backdrop-blur-[2px] lg:hidden"
+          className="fixed inset-0 z-40 bg-black/10 backdrop-blur-[2px] xl:hidden"
           onClick={onClose}
         />
       )}
@@ -22,27 +22,25 @@ const SideBar = ({ isOpen, onClose }: SideBarProps) => {
       {/* Sidebar Drawer */}
       <aside
         className={`
-          fixed top-0 right-0 bottom-0 z-50
+          fixed top-0 left-0 bottom-0 z-50
           w-80
           bg-neutral-200
-          border-l border-neutral-500
+          border-r border-neutral-500
           p-6
           flex flex-col justify-between
-
           transform transition-transform duration-300 ease-in-out
 
-          lg:relative
-          lg:left-0
-          lg:right-auto
-          lg:top-auto
-          lg:bottom-auto
-          lg:h-screen
-          lg:translate-x-0
-          lg:border-r
-          lg:border-l-0
-          lg:bg-transparent
+          xl:relative
+          xl:left-0
+          xl:right-auto
+          xl:top-auto
+          xl:bottom-auto
+          xl:h-screen
+          xl:translate-x-0
+          xl:border-r
+          xl:bg-transparent
 
-          ${isOpen ? "translate-x-0" : "translate-x-full lg:translate-x-0"}
+          ${isOpen ? "translate-x-0" : "-translate-x-full xl:translate-x-0"}
         `}
       >
         {/* Top */}
@@ -59,7 +57,7 @@ const SideBar = ({ isOpen, onClose }: SideBarProps) => {
 
             <button
               onClick={onClose}
-              className="p-2 lg:hidden"
+              className="p-2 xl:hidden"
               aria-label="Close menu"
             >
               <img src={CloseIcon} alt="" />
