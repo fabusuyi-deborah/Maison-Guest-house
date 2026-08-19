@@ -16,7 +16,12 @@ const MainLayout = ({ children }: { children: React.ReactNode }) => {
       {/* Main Content */}
       <div className="flex flex-1 flex-col min-w-0 min-h-0">
         {/* Mobile Header */}
-        <header className=" lg:hidden">
+        <header className="flex items-center justify-between p-4 border-b border-neutral-500 bg-neutral-50 xl:hidden">
+          <div className="flex flex-col font-fraunces uppercase tracking-wider text-neutral-900 leading-none font-bold text-xs">
+            <span>Maison</span>
+            <span>Soleil</span>
+          </div>
+          
           <button
             onClick={() => setIsSidebarOpen(true)}
             className="p-2"
