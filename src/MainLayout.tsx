@@ -1,6 +1,7 @@
 import { useState } from "react";
 import SideBar from "./components/SideBar";
 import OpenIcon from "../src/assets/images/icon-menu.svg";
+import LogoIcon from "../src/assets/images/logo.svg"
 
 const MainLayout = ({ children }: { children: React.ReactNode }) => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -18,8 +19,7 @@ const MainLayout = ({ children }: { children: React.ReactNode }) => {
         {/* Mobile Header */}
         <header className="flex items-center justify-between p-4 border-b border-neutral-500 bg-neutral-50 xl:hidden">
           <div className="flex flex-col font-fraunces uppercase tracking-wider text-neutral-900 leading-none font-bold text-xs">
-            <span>Maison</span>
-            <span>Soleil</span>
+            <img src={LogoIcon} alt="" />
           </div>
           
           <button

@@ -23,7 +23,7 @@ const SideBar = ({ isOpen, onClose }: SideBarProps) => {
       <aside
         className={`
           fixed top-0 left-0 bottom-0 z-50
-          w-80
+         w-full sm:w-80
           bg-neutral-200
           border-r border-neutral-500
           p-6
@@ -47,11 +47,8 @@ const SideBar = ({ isOpen, onClose }: SideBarProps) => {
         <div className="flex flex-col gap-10">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-2">
-              <img src={LogoImage} alt="Logo" className="w-6 h-6" />
-
               <div className="flex flex-col font-fraunces uppercase tracking-wider text-neutral-900 leading-none font-bold text-sm">
-                <span>Maison</span>
-                <span>Soleil</span>
+                 <img src={LogoImage} alt="" />
               </div>
             </div>
 

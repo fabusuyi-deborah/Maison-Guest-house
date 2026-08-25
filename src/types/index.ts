@@ -6,7 +6,10 @@ import houseIcon from "../assets/images/icon-house.svg"
 import pinIcon from "../assets/images/icon-pin.svg"
 import breakfastNavIcon from "../assets/images/icon-breakfast-outline.svg"
 import mailIcon from "../assets/images/icon-mail.svg"
-
+import KitchenImage from "../assets/images/Kitchen.jpg"
+import LivingroomImage from "../assets/images/Livingroom.jpg"
+import BedroomImage from "../assets/images/Bedroom.jpg"
+import TerraceImage from "../assets/images/Terrace.jpg"
 
 export interface InfoCardsData {
   icon: string;
@@ -93,14 +96,76 @@ export const receiptData: ReceiptData = {
 export interface NavItem {
   icon: string;
   label: string;
-  isActive?: boolean;
   badgeCount?: number;
+  path: string;
 }
 
 export const navItems: NavItem[] = [
-  { icon: bedIcon, label: "Your stay", isActive: true, badgeCount: 1 },
-  { icon: houseIcon, label: "The house" },
-  { icon: pinIcon, label: "Around town" },
-  { icon: breakfastNavIcon, label: "Breakfast" },
-  { icon: mailIcon, label: "Messages" },
+  { icon: bedIcon, label: "Your stay", badgeCount: 1, path:"/" },
+  { icon: houseIcon, label: "The house", path:"/the-house" },
+  { icon: pinIcon, label: "Around town", path: "/around-town"},
+  { icon: breakfastNavIcon, label: "Breakfast", path:"/breakfast" },
+  { icon: mailIcon, label: "Messages", path:"/messages" },
+]
+
+// Amenities
+export interface Amenity {
+  icon: string;
+  label: string;
+}
+
+export const amenities: Amenity[] = [
+  { icon: wifiIcon, label: "Free Wi-Fi" },
+  { icon: keyIcon, label: "Self check-in" },
+  { icon: breakfastIcon, label: "Breakfast included" },
+  { icon: houseIcon, label: "Private terrace" },
+  { icon: houseIcon, label: "Full kitchen" },
+  { icon: pinIcon, label: "5 min to the beach" },
+]
+
+
+// Spaces
+export interface Space {
+  image: string;
+  name: string;
+  description: string;
+}
+
+export const spaces: Space[] = [
+  {
+    image: LivingroomImage,
+    name: "Living room",
+    description: "Sun-bleached linen sofas, a well-worn piano, and doors that open straight onto the terrace."
+  },
+  {
+    image: BedroomImage,
+    name: "La Garrigue bedroom",
+    description: "A queen bed dressed in washed cotton, shutters that filter the morning light just right."
+  },
+  {
+    image: KitchenImage,
+    name: "Kitchen",
+    description: "Everything you need for a slow breakfast — and Margaux's honey, if you know where to look."
+  },
+  {
+    image: TerraceImage,
+    name: "Terrace",
+    description: "Olive trees, a hammock, and the best seat in Cassis for a glass of rosé at golden hour."
+  },
+]
+
+// House rules
+
+export interface HouseRule {
+  label: string;
+  value: string;
+}
+
+export const houseRules: HouseRule[] = [
+  { label: "Check-in", value: "From 15:00" },
+  { label: "Check-out", value: "Before 11:00" },
+  { label: "Pets", value: "Not allowed" },
+  { label: "Smoking", value: "Outdoors only" },
+  { label: "Quiet hours", value: "22:00 – 08:00" },
+  { label: "Parties", value: "Not permitted" },
 ]
