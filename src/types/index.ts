@@ -112,17 +112,17 @@ export const navItems: NavItem[] = [
 export interface Amenity {
   icon: string;
   label: string;
+  iconBg: string;
 }
 
 export const amenities: Amenity[] = [
-  { icon: wifiIcon, label: "Free Wi-Fi" },
-  { icon: keyIcon, label: "Self check-in" },
-  { icon: breakfastIcon, label: "Breakfast included" },
-  { icon: houseIcon, label: "Private terrace" },
-  { icon: houseIcon, label: "Full kitchen" },
-  { icon: pinIcon, label: "5 min to the beach" },
+  { icon: wifiIcon, label: "Free Wi-Fi", iconBg: "bg-blue-500" },
+  { icon: keyIcon, label: "Self check-in", iconBg: "bg-terracotta-600" },
+  { icon: breakfastIcon, label: "Breakfast included", iconBg: "bg-rose-500" },
+  { icon: houseIcon, label: "Private terrace", iconBg: "bg-sun-500" },
+  { icon: houseIcon, label: "Full kitchen", iconBg: "bg-terracotta-400" },
+  { icon: pinIcon, label: "5 min to the beach", iconBg: "bg-blue-500" },
 ]
-
 
 // Spaces
 export interface Space {
@@ -169,3 +169,52 @@ export const houseRules: HouseRule[] = [
   { label: "Quiet hours", value: "22:00 – 08:00" },
   { label: "Parties", value: "Not permitted" },
 ]
+
+
+// Breakfast Page
+
+export interface Breakfast {
+  strMeal: string;
+  strMealThumb: string;
+  idMeal: string;
+  strCountry: string;
+}
+
+// Meal Details
+
+export interface MealDetail {
+  idMeal: string;
+  strMeal: string;
+  strCategory: string;
+  strMealThumb: string;
+  strInstructions: string;
+  [key: string]: string | null;
+}
+
+export interface Ingredient {
+  name: string;
+  measure: string;
+}
+
+export interface MappedMealDetail {
+  id: string;
+  name: string;
+  category: string;
+  mealThumb: string;
+  instructions: string;
+}
+
+export function extractIngredients(meal: MealDetail): Ingredient[] {
+  const ingredients: Ingredient[] = [];
+
+  for (let i = 1; i <= 20; i++) {
+    const ingredient = meal[`strIngredient${i}`];
+    const measure = meal[`strMeasure${i}`];
+
+    if (ingredient && ingredient.trim() !== "") {
+      ingredients.push({ name: ingredient, measure: measure || "" });
+    }
+  }
+
+  return ingredients;
+}
