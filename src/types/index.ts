@@ -9,7 +9,16 @@ import mailIcon from "../assets/images/icon-mail.svg"
 import KitchenImage from "../assets/images/Kitchen.jpg"
 import LivingroomImage from "../assets/images/Livingroom.jpg"
 import BedroomImage from "../assets/images/Bedroom.jpg"
+import BathroomImage from "../assets/images/Bathroom.jpg"
 import TerraceImage from "../assets/images/Terrace.jpg"
+import {
+  LuClock3,
+  LuClock9,
+  LuPawPrint,
+  LuCigaretteOff,
+  LuVolumeX,
+  LuPartyPopper,
+} from "react-icons/lu";
 
 export interface InfoCardsData {
   icon: string;
@@ -143,6 +152,11 @@ export const spaces: Space[] = [
     description: "A queen bed dressed in washed cotton, shutters that filter the morning light just right."
   },
   {
+    image: BathroomImage,
+    name: "Bathroom",
+    description: "An indoor-outdoor limestone master sanctuary with seamless glass walls merging with a private Calanques terrace.",
+  },
+  {
     image: KitchenImage,
     name: "Kitchen",
     description: "Everything you need for a slow breakfast — and Margaux's honey, if you know where to look."
@@ -159,15 +173,17 @@ export const spaces: Space[] = [
 export interface HouseRule {
   label: string;
   value: string;
+  iconBg: string;
+  icon: React.ElementType;
 }
 
 export const houseRules: HouseRule[] = [
-  { label: "Check-in", value: "From 15:00" },
-  { label: "Check-out", value: "Before 11:00" },
-  { label: "Pets", value: "Not allowed" },
-  { label: "Smoking", value: "Outdoors only" },
-  { label: "Quiet hours", value: "22:00 – 08:00" },
-  { label: "Parties", value: "Not permitted" },
+  { label: "Check-in", value: "3:00 PM - 10:00PM", icon: LuClock3, iconBg:"bg-blue-500" },
+  { label: "Check-out", value: "Before 11:00AM", icon: LuClock9, iconBg: "bg-terracotta-600" },
+  { label: "Pets", value: "Not allowed", icon: LuPawPrint, iconBg:"bg-rose-500" },
+  { label: "Smoking", value: "Outdoors only", icon: LuCigaretteOff, iconBg: "bg-sun-500" },
+  { label: "Quiet hours", value: "10:00 PM – 08:00 AM", icon: LuVolumeX, iconBg:"bg-blue-500" },
+  { label: "Parties", value: "Not permitted", icon: LuPartyPopper, iconBg: "bg-terracotta-400" },
 ]
 
 
@@ -218,3 +234,17 @@ export function extractIngredients(meal: MealDetail): Ingredient[] {
 
   return ingredients;
 }
+
+// Message Page 
+export interface Message {
+  id: string;
+  sender: "guest" | "host";
+  text: string;
+  timestamp: string;
+}
+
+export const initialMessages: Message[] = [
+  { id: "1", sender: "host", text: "Bonjour Lucia! Just confirming your check-in for the 25th — let me know if you need anything before you arrive.", timestamp: "Yesterday, 14:20" },
+  { id: "2", sender: "guest", text: "Hi Margaux! Just one question — is the terrace accessible in the evening?", timestamp: "Yesterday, 15:02" },
+  { id: "3", sender: "host", text: "Absolutely, anytime you like. There's a light switch just inside the kitchen door.", timestamp: "Yesterday, 15:10" },
+]

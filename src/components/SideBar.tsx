@@ -23,10 +23,10 @@ const SideBar = ({ isOpen, onClose }: SideBarProps) => {
       <aside
         className={`
           fixed top-0 left-0 bottom-0 z-50
-         w-full sm:w-80
+          w-[80vw] sm:w-64
           bg-neutral-200
           border-r border-neutral-500
-          p-6
+          p-4
           flex flex-col justify-between
           transform transition-transform duration-300 ease-in-out
 

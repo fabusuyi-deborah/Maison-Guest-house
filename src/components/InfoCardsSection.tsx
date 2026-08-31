@@ -14,7 +14,7 @@ const InfoCard = ({
   children,
 }: InfoCardsData) => {
   return (
-    <div className="flex h-full flex-col justify-between rounded-3xl bg-neutral-50 p-5 shadow-sm md:p-6">
+    <div className="flex flex-col justify-between rounded-3xl bg-neutral-50 p-5 shadow-sm md:p-6">
       {/* Header */}
       <div className="flex items-start justify-between gap-4">
         <div className="flex items-center gap-3 min-w-0">

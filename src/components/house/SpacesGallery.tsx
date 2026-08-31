@@ -11,12 +11,12 @@ const SpacesSection = () => {
       </div>
       <div className="grid gap-8 lg:grid-cols-[minmax(0,1.6fr)_minmax(0,1fr)]">
         {/* Featured space */}
-        <article className="lg:border-r lg:border-neutral-200 lg:pr-8">
+        <article className="lg:border-r lg:border-neutral-400 lg:pr-8">
           <div className="overflow-hidden rounded-xl">
             <img
               src={featuredSpace.image}
               alt={featuredSpace.name}
-              className="h-80 w-full object-cover md:h-105"
+              className="h-0 w-full object-cover md:h-105"
             />
           </div>
 
@@ -39,7 +39,7 @@ const SpacesSection = () => {
               className="group flex flex-col lg:flex-row lg:items-center lg:gap-4"
             >
               {/* Image */}
-              <div className=" h-80 w-full overflow-hidden rounded-xl lg:h-32 lg:w-48 lg:shrink-0 lg:rounded-lg">
+              <div className=" h-40 w-full overflow-hidden rounded-xl lg:h-20 lg:w-28 lg:shrink-0 lg:rounded-lg">
                 <img
                   src={space.image}
                   alt={space.name}

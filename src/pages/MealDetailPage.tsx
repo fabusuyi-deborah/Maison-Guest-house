@@ -52,7 +52,7 @@ const MealDetailPage = () => {
       </Link>
 
       <div className="mt-4 overflow-hidden rounded-2xl">
-        <img src={meal.mealThumb} alt={meal.name} className="w-full h-100 object-cover" />
+        <img src={meal.mealThumb} alt={meal.name} className="w-full h-70 object-cover" />
       </div>
 
       <div className="mt-6">
