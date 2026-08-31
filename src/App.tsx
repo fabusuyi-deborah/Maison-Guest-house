@@ -4,6 +4,7 @@ import YourStayPage from './pages/YourStayPage'
 import TheHousePage from './pages/TheHousePage'
 import TheBreakfastPage from './pages/TheBreakfastPage'
 import MealDetailPage from './pages/MealDetailPage'
+import MessagesPage from './pages/MessagesPage'
 
 function App() {
   return (
@@ -14,7 +15,7 @@ function App() {
         <Route path="/around-town" element={<h1>Around town</h1>} />
         <Route path="/breakfast" element={<TheBreakfastPage/>} />
         <Route path="/breakfast/:id" element={<MealDetailPage/>} />
-        <Route path="/messages" element={<h1>The messages</h1>} />
+        <Route path="/messages" element={<MessagesPage />} />
       </Routes>
     </MainLayout>
   )
