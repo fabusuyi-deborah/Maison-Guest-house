@@ -7,13 +7,12 @@ const Hero = () => {
     <section className="overflow-visible px-2 py-10 md:py-16">
       <div className="mx-auto w-full max-w-4xl">
         <div className="group relative flex flex-col gap-6 lg:h-136">
-
           {/* Receipt Card */}
           <div
             className="
               relative z-10 w-full
               transition-all duration-300
-              lg:absolute lg:left-0 lg:top-10 lg:w-md
+              lg:absolute lg:left-0 lg:top-10 lg:w-[28rem]
               lg:-rotate-3
               lg:group-hover:-left-16
               lg:group-hover:rotate-0
@@ -46,7 +45,7 @@ const Hero = () => {
               relative z-20 w-full
               transition-all duration-300
 
-              lg:absolute lg:right-0 lg:top-10 lg:w-md
+              lg:absolute lg:right-0 lg:top-10 lg:w-[28rem]
               lg:rotate-3
               lg:group-hover:-right-16
               lg:group-hover:rotate-0
@@ -56,7 +55,6 @@ const Hero = () => {
           >
             <WelcomeCard />
           </div>
-
         </div>
 
         {/* Desktop Hint */}

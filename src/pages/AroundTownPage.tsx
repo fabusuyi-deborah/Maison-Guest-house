@@ -1,5 +1,5 @@
-import Map, { Marker, Popup } from 'react-map-gl/maplibre'
-import type { MapRef } from 'react-map-gl/maplibre'
+import Map, { Marker, Popup } from "react-map-gl/maplibre";
+import type { MapRef } from "react-map-gl/maplibre";
 import { useEffect, useRef, useState } from "react";
 
 export interface OverpassPlace {
@@ -16,7 +16,9 @@ export interface OverpassPlace {
 
 const AroundTownPage = () => {
   const [places, setPlaces] = useState<OverpassPlace[]>([]);
-  const [selectedPlace, setSelectedPlace] = useState<OverpassPlace | null>(null);
+  const [selectedPlace, setSelectedPlace] = useState<OverpassPlace | null>(
+    null,
+  );
   const mapRef = useRef<MapRef>(null);
 
   const getMarkerColor = (place: OverpassPlace): string => {
@@ -39,12 +41,17 @@ const AroundTownPage = () => {
           out body;
         `;
 
-        const response = await fetch("https://overpass-api.de/api/interpreter", {
-          method: "POST",
-          body: query,
-        });
+        const response = await fetch(
+          "https://overpass-api.de/api/interpreter",
+          {
+            method: "POST",
+            body: query,
+          },
+        );
         const data = await response.json();
-        const validPlaces = data.elements.filter((place: OverpassPlace) => place.tags?.name);
+        const validPlaces = data.elements.filter(
+          (place: OverpassPlace) => place.tags?.name,
+        );
         setPlaces(validPlaces);
       } catch (error) {
         console.error("Failed to fetch places:", error);
@@ -55,7 +62,7 @@ const AroundTownPage = () => {
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      window.dispatchEvent(new Event('resize'));
+      window.dispatchEvent(new Event("resize"));
     }, 100);
 
     return () => clearTimeout(timer);
@@ -69,14 +76,16 @@ const AroundTownPage = () => {
   return (
     <div>
       <div className="mb-6">
-        <p className="font-dm-mono text-xs uppercase tracking-widest text-neutral-600">Around town</p>
-        <h1 className="font-fraunces text-2xl text-neutral-900 mt-1">A few of our favorite spots nearby.</h1>
+        <p className="font-dm-mono text-xs uppercase tracking-widest text-neutral-600">
+          Around town
+        </p>
+        <h1 className="font-fraunces text-2xl text-neutral-900 mt-1">
+          A few of our favorite spots nearby.
+        </h1>
       </div>
 
-     
-
       {/* Map */}
-      <div className="h-125 w-full overflow-hidden rounded-2xl">
+      <div className="h-[500px] w-full overflow-hidden rounded-2xl">
         <Map
           ref={mapRef}
           initialViewState={{
@@ -96,7 +105,9 @@ const AroundTownPage = () => {
                 handleSelectPlace(place);
               }}
             >
-              <div className={`w-3 h-3 rounded-full border-2 border-white cursor-pointer ${getMarkerColor(place)}`} />
+              <div
+                className={`w-3 h-3 rounded-full border-2 border-white cursor-pointer ${getMarkerColor(place)}`}
+              />
             </Marker>
           ))}
 
@@ -107,16 +118,20 @@ const AroundTownPage = () => {
               onClose={() => setSelectedPlace(null)}
               closeButton={true}
             >
-              <p className="font-dm-sans text-sm font-medium text-neutral-900">{selectedPlace.tags.name}</p>
+              <p className="font-dm-sans text-sm font-medium text-neutral-900">
+                {selectedPlace.tags.name}
+              </p>
               {selectedPlace.tags.amenity && (
-                <p className="font-dm-mono text-xs uppercase text-neutral-500 mt-1">{selectedPlace.tags.amenity}</p>
+                <p className="font-dm-mono text-xs uppercase text-neutral-500 mt-1">
+                  {selectedPlace.tags.amenity}
+                </p>
               )}
             </Popup>
           )}
         </Map>
       </div>
 
-       {/* Places grid */}
+      {/* Places grid */}
       <div className="grid grid-cols-2 sm:grid-cols-4 gap-x-4 gap-y-2 mt-6">
         {places.map((place) => (
           <button
@@ -124,8 +139,12 @@ const AroundTownPage = () => {
             onClick={() => handleSelectPlace(place)}
             className="text-left rounded-lg p-2 hover:bg-neutral-100 flex items-center gap-2 transition"
           >
-            <div className={`w-2 h-2 rounded-full shrink-0 ${getMarkerColor(place)}`} />
-            <p className="font-dm-sans text-sm text-neutral-800 truncate">{place.tags.name}</p>
+            <div
+              className={`w-2 h-2 rounded-full shrink-0 ${getMarkerColor(place)}`}
+            />
+            <p className="font-dm-sans text-sm text-neutral-800 truncate">
+              {place.tags.name}
+            </p>
           </button>
         ))}
       </div>

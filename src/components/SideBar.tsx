@@ -50,7 +50,7 @@ const SideBar = ({ isOpen, onClose }: SideBarProps) => {
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-2">
               <div className="flex flex-col font-fraunces uppercase tracking-wider text-neutral-900 leading-none font-bold text-sm">
-                 <img src={LogoImage} alt="" />
+                <img src={LogoImage} alt="" />
               </div>
             </div>
 
@@ -64,7 +64,7 @@ const SideBar = ({ isOpen, onClose }: SideBarProps) => {
           </div>
 
           <nav>
-            <NavBar />
+            <NavBar onNavigate={onClose} />
           </nav>
         </div>
 
@@ -76,9 +76,7 @@ const SideBar = ({ isOpen, onClose }: SideBarProps) => {
             <p>Est. 1987</p>
             <p>Maison Soleil · 12 Rue Des Oliviers</p>
             <p>Cassis</p>
-            <p className="pt-2 text-neutral-300">
-              © 2026 Maison Soleil
-            </p>
+            <p className="pt-2 text-neutral-300">© 2026 Maison Soleil</p>
           </div>
         </div>
       </aside>

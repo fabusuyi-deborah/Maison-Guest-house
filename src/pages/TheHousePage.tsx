@@ -10,7 +10,7 @@ const TheHousePage = () => {
         <p className="font-dm-mono text-sm uppercase tracking-widest text-neutral-600">
           The house
         </p>
-        <h1 className="font-fraunces text-4xl text-neutral-900">
+        <h1 className="font-fraunces text-3xl text-neutral-900 md:text-4xl">
           Everything you need,{" "}
           <span className="italic text-terracotta-600">nothing you don't.</span>
         </h1>
