@@ -1,6 +1,6 @@
-import BookingHeader from '../components/BookingHeader'
-import Hero from '../components/Hero'
-import InfoCardsSection from '../components/InfoCardsSection'
+import BookingHeader from "../components/BookingHeader";
+import Hero from "../components/Hero";
+import InfoCardsSection from "../components/InfoCardsSection";
 
 const YourStayPage = () => {
   return (
@@ -9,7 +9,7 @@ const YourStayPage = () => {
       <Hero />
       <InfoCardsSection />
     </>
-  )
-}
+  );
+};
 
-export default YourStayPage
+export default YourStayPage;

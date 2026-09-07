@@ -47,11 +47,7 @@ const InfoCard = ({
       <div className="mt-3 space-y-2 text-neutral-600">
         <p className="font-dm-sans text-sm">{subTitle}</p>
 
-        {cardText && (
-          <p className="font-dm-sans text-sm">
-            {cardText}
-          </p>
-        )}
+        {cardText && <p className="font-dm-sans text-sm">{cardText}</p>}
       </div>
 
       {children && <div className="mt-5">{children}</div>}
@@ -65,12 +61,11 @@ const InfoCardsSection = () => {
   const handleCopy = () => {
     navigator.clipboard.writeText("soleil-2026");
     setCopied(true);
-
     setTimeout(() => setCopied(false), 2000);
   };
 
   return (
-    <section className="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3">
+    <section className="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3 print:hidden">
       {infoCardsData.map((card) => (
         <InfoCard key={card.cardTitle} {...card}>
           {card.cardTitle === "Wifi" && (

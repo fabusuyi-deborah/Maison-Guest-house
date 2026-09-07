@@ -40,6 +40,8 @@ const SideBar = ({ isOpen, onClose }: SideBarProps) => {
           xl:border-r
           xl:bg-transparent
 
+          print:hidden
+
           ${isOpen ? "translate-x-0" : "-translate-x-full xl:translate-x-0"}
         `}
       >
@@ -70,7 +72,7 @@ const SideBar = ({ isOpen, onClose }: SideBarProps) => {
         <div className="mt-auto flex flex-col gap-6">
           <WeatherWidget />
 
-          <div className="space-y-1 font-dm-mono text-[10px] uppercase tracking-widest text-neutral-400">
+          <div className="space-y-1 font-dm-mono text-[10px] uppercase tracking-widest text-neutral-500">
             <p>Est. 1987</p>
             <p>Maison Soleil · 12 Rue Des Oliviers</p>
             <p>Cassis</p>

@@ -81,7 +81,7 @@ const ReceiptCard = () => {
       </div>
 
       <div className="mt-6 flex items-center justify-between">
-        <p className="font-dm-mono text-xs uppercase tracking-widest text-neutral-400">
+        <p className="font-dm-mono text-xs uppercase tracking-widest text-neutral-500">
           Paid · {receiptData.paymentMethod} · {receiptData.currency}
         </p>
 

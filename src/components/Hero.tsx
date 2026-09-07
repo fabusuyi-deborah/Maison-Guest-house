@@ -33,6 +33,8 @@ const Hero = () => {
               transition-opacity duration-300
               lg:block
               lg:group-hover:opacity-100
+
+              print:hidden
             "
           >
             <img src={SunIcon} alt="" className="w-full" />
@@ -48,6 +50,8 @@ const Hero = () => {
               lg:rotate-3
               lg:group-hover:-right-16
               lg:group-hover:rotate-0
+
+              print:hidden
             "
           >
             <WelcomeCard />
@@ -56,7 +60,7 @@ const Hero = () => {
         </div>
 
         {/* Desktop Hint */}
-        <p className="hidden lg:block text-center font-dm-mono text-[10px] uppercase tracking-[0.3em] text-terracotta-600">
+        <p className="hidden lg:block text-center font-dm-mono text-[10px] uppercase tracking-[0.3em] text-terracotta-600 print:hidden">
           ✦ Hover to fan ✦
         </p>
       </div>
