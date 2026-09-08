@@ -1,4 +1,5 @@
 import SpacesGallery from "../components/house/SpacesGallery";
+import SpacesCarousel from "../components/house/SpacesCarousel";
 import AmenitiesSection from "../components/house/AmenitiesSection";
 import HouseRules from "../components/house/HouseRules";
 
@@ -18,9 +19,16 @@ const TheHousePage = () => {
 
       {/* Spaces */}
 
-      <SpacesGallery />
+      <div className="hidden lg:block">
+        <SpacesGallery />
+      </div>
+
+      <div className="lg:hidden mt-6">
+        <SpacesCarousel />
+      </div>
 
       {/* Amenities grid */}
+
       <AmenitiesSection />
 
       {/* House rules */}

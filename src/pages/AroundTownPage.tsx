@@ -85,7 +85,7 @@ const AroundTownPage = () => {
       </div>
 
       {/* Map */}
-      <div className="h-[500px] w-full overflow-hidden rounded-2xl">
+      <div className="h-125 w-full overflow-hidden rounded-2xl">
         <Map
           ref={mapRef}
           initialViewState={{
