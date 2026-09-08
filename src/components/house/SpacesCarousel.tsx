@@ -6,9 +6,9 @@ const SpacesCarousel = () => {
 
   return (
     <div className="overflow-hidden" ref={emblaRef}>
-      <div className="flex gap-4">
+      <div className="flex -ml-4">
         {spaces.map((space) => (
-          <div key={space.name} className="flex-[0_0_85%] min-w-0">
+          <div key={space.name} className="flex-[0_0_85%] min-w-0 pl-4">
             <div className="overflow-hidden rounded-xl">
               <img src={space.image} alt={space.name} className="h-56 w-full object-cover" />
             </div>
