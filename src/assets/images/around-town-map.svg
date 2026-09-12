@@ -1,0 +1,81 @@
+<svg viewBox="0 0 680 500" xmlns="http://www.w3.org/2000/svg">
+  <rect width="680" height="500" fill="#FBF3E7" />
+  <circle cx="600" cy="70" r="34" fill="#EDB73B" />
+  <g stroke="#EDB73B" stroke-width="4" stroke-linecap="round" opacity="0.8">
+    <line x1="600" y1="18" x2="600" y2="4" />
+    <line x1="645" y1="35" x2="656" y2="24" />
+    <line x1="662" y1="70" x2="676" y2="70" />
+    <line x1="645" y1="105" x2="656" y2="116" />
+  </g>
+  <path d="M0,290 C90,270 150,300 230,292 C320,282 370,315 450,338 C540,360 610,378 680,368 L680,500 L0,500 Z" fill="#7C93C4" />
+  <g stroke="#5F78AC" stroke-width="1.2" opacity="0.4" fill="none">
+    <path d="M30,330 q22,-7 44,0" /><path d="M120,350 q22,-7 44,0" /><path d="M210,368 q22,-7 44,0" />
+    <path d="M310,388 q22,-7 44,0" /><path d="M420,405 q22,-7 44,0" /><path d="M520,420 q22,-7 44,0" />
+    <path d="M70,410 q22,-7 44,0" /><path d="M240,428 q22,-7 44,0" /><path d="M430,450 q22,-7 44,0" /><path d="M560,460 q22,-7 44,0" />
+  </g>
+  <g>
+    <path d="M470,340 l30,-8 l4,9 l-30,8 Z" fill="#FDFCF9" stroke="#B5A88C" stroke-width="1" />
+    <line x1="497" y1="335" x2="497" y2="315" stroke="#8A7F68" stroke-width="1.2" />
+    <path d="M497,317 l16,6 l-16,6 Z" fill="#B6421B" />
+  </g>
+  <g>
+    <path d="M540,368 l28,-7 l4,9 l-28,7 Z" fill="#FDFCF9" stroke="#B5A88C" stroke-width="1" />
+    <line x1="565" y1="363" x2="565" y2="345" stroke="#8A7F68" stroke-width="1.2" />
+    <path d="M565,347 l14,5 l-14,5 Z" fill="#586AC6" />
+  </g>
+  <g>
+    <path d="M120,395 l26,-6 l3,8 l-26,6 Z" fill="#FDFCF9" stroke="#B5A88C" stroke-width="1" />
+    <line x1="143" y1="391" x2="143" y2="375" stroke="#8A7F68" stroke-width="1.2" />
+    <path d="M143,377 l13,5 l-13,5 Z" fill="#EDB73B" />
+  </g>
+  <path d="M400,140 C465,110 520,150 505,225 C492,290 560,300 590,255 C618,215 650,270 630,340 C615,378 660,395 680,378 L680,140 Z" fill="#B6421B" />
+  <path d="M440,175 C475,168 485,200 462,225 C445,244 478,250 498,232" fill="none" stroke="#8C3A1E" stroke-width="2.2" opacity="0.5" />
+  <path d="M520,240 C545,232 555,258 538,278" fill="none" stroke="#8C3A1E" stroke-width="2.2" opacity="0.45" />
+  <g>
+    <rect x="600" y="150" width="8" height="30" fill="#EFE4D0" stroke="#C9BB9E" stroke-width="1" />
+    <polygon points="596,150 612,150 604,136" fill="#B6421B" />
+    <rect x="602" y="140" width="4" height="6" fill="#7C93C4" opacity="0.7" />
+  </g>
+  <path d="M150,270 C178,256 218,264 236,292 C250,313 228,332 200,324 C176,317 162,292 150,270 Z" fill="#EFE4D0" stroke="#B5A88C" stroke-width="1.5" />
+  <line x1="156" y1="274" x2="228" y2="318" stroke="#C9BB9E" stroke-width="1" opacity="0.6" />
+  <g>
+    <rect x="40" y="170" width="34" height="34" rx="2" fill="#F0E6D4" stroke="#C9BB9E" />
+    <polygon points="36,170 78,170 57,150" fill="#B6421B" />
+    <rect x="78" y="182" width="26" height="22" rx="2" fill="#EAD9BC" stroke="#C9BB9E" />
+    <polygon points="75,182 107,182 91,166" fill="#93381C" />
+    <rect x="106" y="165" width="30" height="39" rx="2" fill="#F0E6D4" stroke="#C9BB9E" />
+    <polygon points="102,165 140,165 121,146" fill="#D9926B" />
+    <rect x="20" y="200" width="24" height="20" rx="2" fill="#EAD9BC" stroke="#C9BB9E" />
+    <polygon points="17,200 47,200 32,186" fill="#B6421B" />
+    <rect x="150" y="190" width="30" height="30" rx="2" fill="#F0E6D4" stroke="#C9BB9E" />
+    <polygon points="146,190 184,190 165,172" fill="#93381C" />
+    <rect x="182" y="200" width="24" height="20" rx="2" fill="#EAD9BC" stroke="#C9BB9E" />
+    <polygon points="179,200 209,200 194,186" fill="#D9926B" />
+    <rect x="200" y="160" width="26" height="24" rx="2" fill="#F0E6D4" stroke="#C9BB9E" />
+    <polygon points="196,160 230,160 213,144" fill="#B6421B" />
+    <g stroke="#8A7F68" stroke-width="0.75" opacity="0.6">
+      <line x1="48" y1="178" x2="48" y2="196" /><line x1="60" y1="178" x2="60" y2="196" />
+      <line x1="158" y1="198" x2="158" y2="212" /><line x1="170" y1="198" x2="170" y2="212" />
+    </g>
+  </g>
+  <g fill="#5E6E38">
+    <g transform="translate(60,110) scale(1.1)"><polygon points="0,-18 -10,4 10,4" /><polygon points="0,-9 -8,9 8,9" /><rect x="-2" y="9" width="4" height="7" fill="#5A4A32" /></g>
+    <g transform="translate(84,122)"><polygon points="0,-15 -8,3 8,3" /><polygon points="0,-7 -6,8 6,8" /><rect x="-1.5" y="8" width="3" height="5" fill="#5A4A32" /></g>
+    <g transform="translate(258,120) scale(1.1)"><polygon points="0,-18 -10,4 10,4" /><polygon points="0,-9 -8,9 8,9" /><rect x="-2" y="9" width="4" height="7" fill="#5A4A32" /></g>
+    <g transform="translate(280,132)"><polygon points="0,-15 -8,3 8,3" /><polygon points="0,-7 -6,8 6,8" /><rect x="-1.5" y="8" width="3" height="5" fill="#5A4A32" /></g>
+    <g transform="translate(300,145)"><polygon points="0,-13 -7,3 7,3" /><polygon points="0,-6 -5,7 5,7" /><rect x="-1.5" y="7" width="3" height="5" fill="#5A4A32" /></g>
+  </g>
+  <g fill="#8A9860" opacity="0.85">
+    <ellipse cx="130" cy="255" rx="12" ry="8" />
+    <ellipse cx="148" cy="260" rx="10" ry="7" />
+    <ellipse cx="235" cy="240" rx="12" ry="8" />
+    <ellipse cx="252" cy="246" rx="10" ry="7" />
+    <ellipse cx="330" cy="215" rx="11" ry="7" />
+  </g>
+  <path d="M50,200 C130,225 200,235 260,265 C320,295 400,285 460,310" fill="none" stroke="#B5A88C" stroke-width="2.2" stroke-dasharray="7 6" opacity="0.8" />
+  <text x="470" y="465" font-family="Georgia, serif" font-size="30" font-style="italic" fill="#D9926B" opacity="0.5">Cassis</text>
+  <g>
+    <line x1="40" y1="440" x2="100" y2="440" stroke="#8A7F68" stroke-width="2" />
+    <text x="40" y="458" font-family="monospace" font-size="11" fill="#8A7F68">250 m</text>
+  </g>
+</svg>

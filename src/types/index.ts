@@ -248,3 +248,61 @@ export const initialMessages: Message[] = [
   { id: "2", sender: "guest", text: "Hi Margaux! Just one question — is the terrace accessible in the evening?", timestamp: "Yesterday, 15:02" },
   { id: "3", sender: "host", text: "Absolutely, anytime you like. There's a light switch just inside the kitchen door.", timestamp: "Yesterday, 15:10" },
 ]
+
+export interface AroundTownPlace {
+  id: number;
+  name: string;
+  category: "eat" | "swim" | "walk";
+  description: string;
+  walkTime: string;
+  x: number;
+  y: number;
+}
+
+export const aroundTownPlaces: AroundTownPlace[] = [
+  {
+    id: 1,
+    name: "Bar de la Marine",
+    category: "eat",
+    description: "Pastis on the quay at six. Ask for the corner table — tell them you're staying with us.",
+    walkTime: "4 min",
+    x: 27,
+    y: 68,
+  },
+  {
+    id: 2,
+    name: "Marché de Cassis",
+    category: "eat",
+    description: "Wednesday and Friday mornings. Go hungry — tapenade, peaches, and the goat cheese from the third stall.",
+    walkTime: "3 min",
+    x: 24,
+    y: 50,
+  },
+  {
+    id: 3,
+    name: "Plage de la Grande Mer",
+    category: "swim",
+    description: "The town beach. Best before 9am, when it belongs to swimmers and one very confident seagull.",
+    walkTime: "6 min",
+    x: 65,
+    y: 82,
+  },
+  {
+    id: 4,
+    name: "Calanque de Port-Pin",
+    category: "swim",
+    description: "Our favorite swim. A shaded pine path ends at green-blue water. Bring water shoes.",
+    walkTime: "20 min",
+    x: 82,
+    y: 55,
+  },
+  {
+    id: 5,
+    name: "Presqu'île path",
+    category: "walk",
+    description: "A flat cliff-edge loop with the best view back over the harbor. Golden at sunset.",
+    walkTime: "12 min",
+    x: 70,
+    y: 35,
+  },
+];
