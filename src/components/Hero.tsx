@@ -12,7 +12,7 @@ const Hero = () => {
             className="
               relative z-10 w-full
               transition-all duration-300
-              lg:absolute lg:left-0 lg:top-10 lg:w-[28rem]
+              lg:absolute lg:left-0 lg:top-10 lg:w-md
               lg:-rotate-3
               lg:group-hover:-left-16
               lg:group-hover:rotate-0
@@ -45,7 +45,7 @@ const Hero = () => {
               relative z-20 w-full
               transition-all duration-300
 
-              lg:absolute lg:right-0 lg:top-10 lg:w-[28rem]
+              lg:absolute lg:right-0 lg:top-10 lg:w-md
               lg:rotate-3
               lg:group-hover:-right-16
               lg:group-hover:rotate-0

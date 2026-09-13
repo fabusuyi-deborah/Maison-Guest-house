@@ -1,4 +1,5 @@
 import NavBar from "./NavBar";
+import { Link } from "react-router-dom";
 import WeatherWidget from "./WeatherWidget";
 import LogoImage from "../assets/images/logo.svg";
 import CloseIcon from "../assets/images/icon-close.svg";
@@ -49,9 +50,13 @@ const SideBar = ({ isOpen, onClose }: SideBarProps) => {
         <div className="flex flex-col gap-10">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-2">
-              <div className="flex flex-col font-fraunces uppercase tracking-wider text-neutral-900 leading-none font-bold text-sm">
-                <img src={LogoImage} alt="" />
-              </div>
+              <Link
+                to="/"
+                aria-label="Go to home page"
+                className="flex flex-col font-fraunces uppercase tracking-wider text-neutral-900 leading-none font-bold text-sm"
+              >
+                <img src={LogoImage} alt="Maison Soleil home" />
+              </Link>
             </div>
 
             <button

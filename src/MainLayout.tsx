@@ -1,7 +1,8 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import SideBar from "./components/SideBar";
 import OpenIcon from "../src/assets/images/icon-menu.svg";
-import LogoIcon from "../src/assets/images/logo.svg"
+import LogoIcon from "../src/assets/images/logo.svg";
 
 const MainLayout = ({ children }: { children: React.ReactNode }) => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -9,19 +10,20 @@ const MainLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <div className="flex h-screen overflow-hidden bg-neutral-100">
       {/* Desktop Sidebar */}
-      <SideBar
-        isOpen={isSidebarOpen}
-        onClose={() => setIsSidebarOpen(false)}
-      />
+      <SideBar isOpen={isSidebarOpen} onClose={() => setIsSidebarOpen(false)} />
 
       {/* Main Content */}
       <div className="flex flex-1 flex-col min-w-0 min-h-0">
         {/* Mobile Header */}
         <header className="flex items-center justify-between p-4 border-b border-neutral-500 bg-neutral-50 xl:hidden print:hidden">
-          <div className="flex flex-col font-fraunces uppercase tracking-wider text-neutral-900 leading-none font-bold text-xs">
-            <img src={LogoIcon} alt="" />
-          </div>
-          
+          <Link
+            to="/"
+            aria-label="Go to home page"
+            className="flex flex-col font-fraunces uppercase tracking-wider text-neutral-900 leading-none font-bold text-xs"
+          >
+            <img src={LogoIcon} alt="Maison Soleil home" />
+          </Link>
+
           <button
             onClick={() => setIsSidebarOpen(true)}
             className="p-2"
@@ -31,9 +33,7 @@ const MainLayout = ({ children }: { children: React.ReactNode }) => {
           </button>
         </header>
 
-        <main className="flex-1 overflow-y-auto p-6 md:p-10">
-          {children}
-        </main>
+        <main className="flex-1 overflow-y-auto p-6 md:p-10">{children}</main>
       </div>
     </div>
   );

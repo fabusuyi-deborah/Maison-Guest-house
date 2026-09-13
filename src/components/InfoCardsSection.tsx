@@ -65,46 +65,61 @@ const InfoCardsSection = () => {
   };
 
   return (
-    <section className="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3 print:hidden">
-      {infoCardsData.map((card) => (
-        <InfoCard key={card.cardTitle} {...card}>
-          {card.cardTitle === "Wifi" && (
-            <div className="mt-4 space-y-3">
-              {/* Network */}
-              <div className="flex flex-col gap-2 rounded-2xl bg-neutral-200 p-4 sm:flex-row sm:items-center sm:justify-between">
-                <p className="font-dm-mono text-xs uppercase tracking-wide text-neutral-600">
-                  Network
-                </p>
-
-                <p className="font-dm-sans text-sm text-neutral-700 break-all">
-                  Le Soleil · Guest
-                </p>
-              </div>
-
-              {/* Password */}
-              <div className="flex flex-col gap-3 rounded-2xl bg-neutral-200 p-4 sm:flex-row sm:items-center sm:justify-between">
-                <p className="font-dm-mono text-xs uppercase tracking-wide text-neutral-600">
-                  Password
-                </p>
-
-                <div className="flex flex-wrap items-center gap-2">
-                  <p className="font-dm-sans text-sm text-neutral-700 break-all">
-                    soleil-2026
+    <>
+      <section className="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3 print:hidden">
+        {infoCardsData.map((card) => (
+          <InfoCard key={card.cardTitle} {...card}>
+            {card.cardTitle === "Wifi" && (
+              <div className="mt-4 space-y-3">
+                {/* Network */}
+                <div className="flex flex-col gap-2 rounded-2xl bg-neutral-200 p-4 sm:flex-row sm:items-center sm:justify-between">
+                  <p className="font-dm-mono text-xs uppercase tracking-wide text-neutral-600">
+                    Network
                   </p>
 
-                  <button
-                    onClick={handleCopy}
-                    className="rounded-full border border-neutral-900 px-3 py-1 font-dm-mono text-xs uppercase tracking-wide text-neutral-700 transition hover:bg-neutral-900 hover:text-white"
-                  >
-                    {copied ? "Copied" : "Copy"}
-                  </button>
+                  <p className="font-dm-sans text-sm text-neutral-700 break-all">
+                    Le Soleil · Guest
+                  </p>
+                </div>
+
+                {/* Password */}
+                <div className="flex flex-col gap-3 rounded-2xl bg-neutral-200 p-4 sm:flex-row sm:items-center sm:justify-between">
+                  <p className="font-dm-mono text-xs uppercase tracking-wide text-neutral-600">
+                    Password
+                  </p>
+
+                  <div className="flex flex-wrap items-center gap-2">
+                    <p className="font-dm-sans text-sm text-neutral-700 break-all">
+                      soleil-2026
+                    </p>
+
+                    <button
+                      onClick={handleCopy}
+                      className="rounded-full border border-neutral-900 px-3 py-1 font-dm-mono text-xs uppercase tracking-wide text-neutral-700 transition hover:bg-neutral-900 hover:text-white"
+                    >
+                      {copied ? "Copied" : "Copy"}
+                    </button>
+                  </div>
                 </div>
               </div>
-            </div>
-          )}
-        </InfoCard>
-      ))}
-    </section>
+            )}
+          </InfoCard>
+        ))}
+      </section>
+
+      {copied && (
+        <div
+          role="status"
+          aria-live="polite"
+          className="fixed bottom-6 left-1/2 z-50 flex -translate-x-1/2 items-center gap-3 rounded-full bg-neutral-900 px-5 py-3 font-dm-sans text-sm text-neutral-50 shadow-lg shadow-neutral-900/20 animate-[fade-in_180ms_ease-out]"
+        >
+          <span className="flex h-6 w-6 items-center justify-center rounded-full bg-sun-300 text-xs font-bold text-neutral-900">
+            ✓
+          </span>
+          Password copied
+        </div>
+      )}
+    </>
   );
 };
 

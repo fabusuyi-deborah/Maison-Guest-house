@@ -124,7 +124,7 @@ const AroundTownPage = () => {
         </div>
       </div>
 
-      <div className="mt-6 flex items-center justify-between gap-3 rounded-[10px] bg-[#b74729] px-4 py-3 text-neutral-50 shadow-sm">
+      <div className="mt-6 flex items-center justify-between gap-3 rounded-[10px] bg-terracotta-600 px-4 py-3 text-neutral-50 shadow-sm">
         <div className="flex items-center gap-3">
           <span className="flex h-6 w-6 items-center justify-center rounded-full border border-white/70 text-sm">
             ✦
@@ -139,9 +139,9 @@ const AroundTownPage = () => {
             </p>
           </div>
         </div>
-        <button className="rounded-full border border-white/70 bg-white/10 px-3 py-1.5 font-dm-sans text-[10px] uppercase tracking-[0.2em] text-neutral-50 transition hover:bg-white/20">
-            <Link to="/messages">Message us</Link>
-        </button>
+        <Link to="/messages" className="rounded-full border border-white/70 bg-white/10 px-3 py-1.5 font-dm-sans text-[10px] uppercase tracking-[0.2em] text-neutral-50 transition hover:bg-white/20">
+          Message us
+        </Link>
       </div>
     </div>
   );
